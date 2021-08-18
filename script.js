@@ -43,7 +43,7 @@ window.onload = () => {
   // allow front and back camera 
   function render() {
     const scene = document.querySelector('a-scene');
-    const offset = 10;// only for testing 
+    const offset = 2;// only for testing 
     navigator.geolocation.getCurrentPosition(function (position) {
       const latitude = position.coords.latitude+offset;
       const longitude = position.coords.longitude+offset;
