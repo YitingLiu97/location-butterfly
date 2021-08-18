@@ -37,12 +37,15 @@ window.onload = () => {
     entity.setAttribute('gltf-model', model.url);
   };
   
+  // should place the model in an offset within the range of the device position
+  // allow zoom in zoom out?
+  // set the height of the thing to be above the floor/phone level 
   function render() {
     const scene = document.querySelector('a-scene');
-  
+    const offset = 10;// only for testing 
     navigator.geolocation.getCurrentPosition(function (position) {
-      const latitude = position.coords.latitude;
-      const longitude = position.coords.longitude;
+      const latitude = position.coords.latitude+offset;
+      const longitude = position.coords.longitude+offset;
   
       const model = document.createElement('a-entity');
       model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
