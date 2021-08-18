@@ -40,6 +40,7 @@ window.onload = () => {
   // should place the model in an offset within the range of the device position
   // allow zoom in zoom out?
   // set the height of the thing to be above the floor/phone level 
+  // allow front and back camera 
   function render() {
     const scene = document.querySelector('a-scene');
     const offset = 10;// only for testing 
