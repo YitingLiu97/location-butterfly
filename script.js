@@ -4,7 +4,7 @@ window.onload = () => {
   
   const models = [
     {
-      url: './assets/asset.glb',
+      url: './assets/petalfalling3.glb',
       scale: '0.5 0.5 0.5',
       rotation: '0 225 0'
     }
