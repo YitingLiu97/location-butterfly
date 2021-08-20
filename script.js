@@ -9,7 +9,7 @@ window.onload = () => {
     //   rotation: '0 225 0'
     // },
     {
-      url: './assets/asset.glb',
+      url: './assets/butterfly and petals falling.glb',
       scale: '0.5 0.5 0.5',
       rotation: '0 225 0'
     }
