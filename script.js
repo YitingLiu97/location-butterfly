@@ -12,12 +12,12 @@ window.onload = () => {
       url: './assets/butterfly and petals falling.glb',
       scale: '0.5 0.5 0.5',
       rotation: '0 225 0'
-    }
-    // {
-    //   url: './assets/articuno/scene.gltf',
-    //   scale: '0.2 0.2 0.2',
-    //   rotation: '0 225 0'
-    // },
+    },
+    {
+      url: './assets/butterflyFBX-none.glb',
+      scale: '0.2 0.2 0.2',
+      rotation: '0 225 0'
+    },
     // {
     //   url: './assets/dragonite/scene.gltf',
     //   scale: '0.08 0.08 0.08',
