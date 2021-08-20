@@ -14,7 +14,7 @@ window.onload = () => {
     //   rotation: '0 225 0'
     // },
     {
-      url: './assets/butterflyFBX-none.glb',
+      url: './assets/butterflyFBX.glb',
       scale: '0.2 0.2 0.2',
       rotation: '0 225 0'
     }
@@ -48,7 +48,7 @@ window.onload = () => {
   // allow front and back camera 
   function render() {
     const scene = document.querySelector('a-scene');
-    const offset = 0;// only for testing 
+    const offset = 2;// only for testing 
     navigator.geolocation.getCurrentPosition(function (position) {
       const latitude = position.coords.latitude+offset;
       const longitude = position.coords.longitude+offset;
