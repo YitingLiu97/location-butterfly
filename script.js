@@ -1,4 +1,12 @@
 window.onload = () => {
+  var entity = document.getElementById("music");
+  entity.play();
+
+  // entity.addEventListener("canplaythrough", event => {
+  //   /* the audio is now playable; play it if permissions allow */
+  //   entity.play();
+  // });  
+  console.log("entity is "+entity);
   render();
 };
 
@@ -50,9 +58,7 @@ function render() {
   const scene = document.querySelector('a-scene');
   const offset = 2; // only for testing 
   navigator.geolocation.getCurrentPosition(function (position) {
-    var entity = document.querySelector('[sound]');
-entity.components.sound.playSound();
-
+  
     const latitude = position.coords.latitude + offset;
     const longitude = position.coords.longitude + offset;
 
