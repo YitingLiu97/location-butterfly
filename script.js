@@ -14,7 +14,7 @@ window.onload = () => {
     //   rotation: '0 225 0'
     // },
     {
-      url: './assets/butterflypetals2.glb',
+      url: './assets/asset.glb',
       scale: '1 1 1',
       rotation: '0 225 0'
     }
