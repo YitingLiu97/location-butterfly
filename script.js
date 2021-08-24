@@ -54,21 +54,10 @@ function render() {
     const longitude = position.coords.longitude + offset;
 
     const model = document.createElement('a-entity');
-    // model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-    model.setAttribute('gps-entity-place', `latitude: simulateLatitude; longitude: ${longitude};`);
-
-    //setModel(models[modelIndex], model);
+    model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
     setModel(models[modelIndex], model);
 
     model.setAttribute('animation-mixer', '');
-    // add place name
-    const placeText = document.createElement('a-link');
-    placeText.setAttribute('title', position.name);
-    placeText.setAttribute('scale', '15 15 15');
-
-    placeText.addEventListener('loaded', () => {
-      window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-    });
 
     document.querySelector('button[data-action="change"]').addEventListener('click', function () {
       const entity = document.querySelector('[gps-entity-place]');
@@ -76,7 +65,6 @@ function render() {
       const newIndex = modelIndex % models.length;
       setModel(models[newIndex], entity);
     });
-    scene.appendChild(placeText);
     scene.appendChild(model);
   });
 }
