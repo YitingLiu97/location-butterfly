@@ -15,7 +15,7 @@ const models = [
   // },
   {
     url: './assets/asset.glb',
-    scale: '1 1 1',
+    scale: '10 10 10',
     rotation: '0 225 0'
   }
   // {
@@ -39,7 +39,7 @@ const setModel = (model, entity) => {
     entity.setAttribute('position', model.position);
   }
 
-  entity.setAttribute('gltf-model', model.url);
+  entity.setAttribute('glb-model', model.url);
 };
 
 // should place the model in an offset within the range of the device position
@@ -54,7 +54,8 @@ function render() {
     const longitude = position.coords.longitude + offset;
 
     const model = document.createElement('a-entity');
-    model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+    // model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+    model.setAttribute('gps-entity-place', `latitude: simulateLatitude; longitude: ${longitude};`);
 
     //setModel(models[modelIndex], model);
     setModel(models[modelIndex], model);
