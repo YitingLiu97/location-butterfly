@@ -15,7 +15,7 @@ const models = [
   // },
   {
     url: './assets/asset.glb',
-    scale: '10 10 10',
+    scale: '2 2 2',
     rotation: '0 225 0'
   }
   // {
@@ -39,7 +39,7 @@ const setModel = (model, entity) => {
     entity.setAttribute('position', model.position);
   }
 
-  entity.setAttribute('glb-model', model.url);
+  entity.setAttribute('gltf-model', model.url);
 };
 
 // should place the model in an offset within the range of the device position
