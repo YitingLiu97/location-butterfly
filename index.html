@@ -13,9 +13,7 @@
 
 
     <body style='margin: 0; overflow: hidden;'>
-        <a-assets>
-            <audio id="sound" src="./assets/Point10.mp3" preload="auto"></audio>
-        </a-assets>
+        
 
         <a-scene
           raycaster="objects: [gps-entity-place];"
@@ -24,9 +22,13 @@
           arjs='trackingMethod: best; sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>    
           <a-camera gps-camera rotation-reader></a-camera>
           <!-- testing the similateLatitude -->
-          <a-box material="color: red;" scale="15 15 15" position="0 0 0" gps-entity-place="latitude: 41.890339; longitude: 12.492586;"></a-box>
-          <a-camera gps-camera="simulateLatitude: 41.890890; simulateLongitude: 12.489357;" rotation-reader>
+          <!-- <a-box material="color: red;" scale="15 15 15" position="0 0 0" gps-entity-place="latitude: 41.890339; longitude: 12.492586;"></a-box>
+          <a-camera gps-camera="simulateLatitude: 41.890890; simulateLongitude: 12.489357;" rotation-reader> -->
           </a-camera>
+          <a-assets>
+            <audio id="sound" src="./assets/Point10.mp3" preload="auto"></audio>
+        </a-assets>
+        
         </a-scene>
         <div class="centered">
           <button data-action="change">?</button>

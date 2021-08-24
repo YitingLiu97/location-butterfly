@@ -63,7 +63,7 @@ function render() {
     model.setAttribute('animation-mixer', '');
     // add place name
     const placeText = document.createElement('a-link');
-    placeText.setAttribute('title', place.name);
+    placeText.setAttribute('title', position.name);
     placeText.setAttribute('scale', '15 15 15');
 
     placeText.addEventListener('loaded', () => {
