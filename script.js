@@ -50,6 +50,9 @@ function render() {
   const scene = document.querySelector('a-scene');
   const offset = 2; // only for testing 
   navigator.geolocation.getCurrentPosition(function (position) {
+    var entity = document.querySelector('[sound]');
+entity.components.sound.playSound();
+
     const latitude = position.coords.latitude + offset;
     const longitude = position.coords.longitude + offset;
 
