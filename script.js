@@ -22,7 +22,7 @@ const models = [
   //   rotation: '0 225 0'
   // },
   {
-    url: './assets/asset.glb',
+    url: './assets/butterflypetals3.glb',
     scale: '2 2 2',
     rotation: '0 225 0'
   }
