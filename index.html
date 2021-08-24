@@ -8,24 +8,31 @@
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
     </head>
     <title>location based butterfly demo</title>
-    <!-- <script src="./script.js"></script> -->
+    <script src="./script.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="./style.css"/> -->
 
 
     <body style='margin: 0; overflow: hidden;'>
+        <a-assets>
+            <audio id="sound" src="Point10.mp3" preload="auto"></audio>
+        </a-assets>
+
         <a-scene
           raycaster="objects: [gps-entity-place];"
           vr-mode-ui="enabled: false"
               embedded
           arjs='trackingMethod: best; sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>    
           <a-camera gps-camera rotation-reader></a-camera>
+          <!-- testing the similateLatitude -->
+          <a-box material="color: red;" scale="15 15 15" position="0 0 0" gps-entity-place="latitude: 41.890339; longitude: 12.492586;"></a-box>
+          <a-camera gps-camera="simulateLatitude: 41.890890; simulateLongitude: 12.489357;" rotation-reader>
+          </a-camera>
         </a-scene>
         <div class="centered">
           <button data-action="change">?</button>
         </div>
       </body>
 
-      <a-box material="color: yellow" gps-entity-place="latitude: simulateLatitude; longitude: simulateLongitude" position="0 1.2 0"/>
 
     <body style="margin: 0; overflow: hidden;">
         <a-scene
